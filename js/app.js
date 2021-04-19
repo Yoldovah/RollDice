@@ -44,8 +44,11 @@ function rollDice(){
    if (scorePlayer.reduce((sum,current)=>sum + current)>scoreDealer.reduce((sum,current) => sum + current)){
        alert('Le joueur O\'clockien a gagné !');
    }
-   else{
+   else if(scorePlayer.reduce((sum,current)=>sum + current)<scoreDealer.reduce((sum,current) => sum + current)){
        alert('Le dealer a gagné !');
+   }
+    else {
+        alert('Égalité !');
    }
 }
 //bonus
